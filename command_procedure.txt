@@ -6,6 +6,7 @@
 
 [password : admin admin , root root1234]
 [newUser 1234new]
+
 - creating user from frontend part 1 
 
 - crispy from for making from nc.
@@ -30,14 +31,16 @@
 
 - (authenticate loggedin user signup and login page dkte prbe na !!)
 
--
+- Change Password using and without using old password
 
--
+- [two tacknique to change password ! - using old , without old !]
 
--
+- PasswordChangeForm [ using old pass]
 
--
+- SetPasswordForm [without using old pass]
 
--
+- [form.cleaned_data tokhone py jkhn user form fill up kre...! ]
 
--
+- 
+
+- 
