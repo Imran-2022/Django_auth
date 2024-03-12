@@ -5,7 +5,7 @@
 - 
 
 [password : admin admin , root root1234]
-
+[newUser 1234new]
 - creating user from frontend part 1 
 
 - crispy from for making from nc.
@@ -14,12 +14,16 @@
 
 - conditional CSSS ! 
 
--
+- jokhn kno user signup krbe tkhn login page a redirect krbe.
 
--
+- thn lgoin krle profile page a redirect krbe.
 
--
+- login information session data te pawa jbe... !!!
 
--
+- only authenticate user can see the profile ! 
 
--
+- 
+
+- 
+
+- 

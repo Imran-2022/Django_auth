@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block body%}
+<div class="py-5 w-50 m-auto">
+    <!-- {{form|crispy}} -->
+    <form method="POST" class="w-50 m-auto" novalidate>
+        <h1>Log-in Page</h1>
+        {% csrf_token %}
+        {% for fm in form %} 
+            {{fm.label_tag}} 
+            {{fm}} 
+            {{fm.errors|striptags}} 
+        {% endfor %}
+        <br />
+        <button class="btn btn-warning d-block w-100" type="submit">
+          Log-in
+        </button>
+      </form>
+
+</div>
+{% endblock %}
