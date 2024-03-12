@@ -1,0 +1,25 @@
+- django-admin startproject 
+- django-admin startapp
+- py manage.py runserver
+- py manage.py createsuperuser [table create kra than ai command, so first py manage.py makemigrations , migrate ]
+- 
+
+[password : admin admin , root root1234]
+
+- creating user from frontend part 1 
+
+- crispy from for making from nc.
+
+- message framework ! to pass message over the whole application 
+
+- conditional CSSS ! 
+
+-
+
+-
+
+-
+
+-
+
+-
