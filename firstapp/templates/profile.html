@@ -5,7 +5,30 @@
 <h1>Welcome to user Profile !!</h1>
 <h1>Hellow {{user}}</h1>
 
-<p><a href="{% url 'pass_change' %}">Change your Password with old password</a></p>
-<p><a href="{% url 'pass_change2' %}">Change your Password without old password</a></p>
+<p><a class="btn btn-info" href="{% url 'pass_change' %}">Change your Password with old password</a> <a class="btn btn-danger" href="{% url 'pass_change2' %}">Change your Password without old password</a></p>
+
+<div>
+    {% if messages %}
+    {% for m in messages %}
+    <p class="bg-success p-3 text-white">{{m}}</p>
+    {% endfor %}
+    {% endif %}
+    <br>
+</div>
+
+<form method="POST" class="w-50 m-auto" novalidate>
+    {% csrf_token %}
+    <!-- {{form|crispy}} -->
+   
+    {% for fm in form %} 
+        {{fm.label_tag}} 
+        {{fm}} 
+        {{fm.errors|striptags}} 
+    {% endfor %}
+    <br />
+    <button class="btn btn-warning d-block w-100" type="submit">
+      Change Data
+    </button>
+  </form>
 
 {% endblock %}

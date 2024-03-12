@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from .forms import RegisterForm
+from .forms import RegisterForm,changeUserdata
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm,PasswordChangeForm,SetPasswordForm
 from django.contrib.auth import authenticate,login,logout,update_session_auth_hash
@@ -51,12 +51,22 @@ def user_login(request):
 
 
 def profile(request):
-    if request.user.is_authenticated: 
-        # by this code, annonymas user failed to get access 🐸
-        return render(request,'profile.html',{'user':request.user})
+    # if request.user.is_authenticated: 
+    #     # by this code, annonymas user failed to get access 🐸
+    #     return render(request,'profile.html',{'user':request.user})
+    # else:
+    #     return redirect('login')
+    if request.user.is_authenticated:
+        if request.method=="POST":
+            form=changeUserdata(request.POST,instance=request.user)
+            if form.is_valid():
+                messages.success(request,'Account Updated successfully !')
+                form.save(commit=True)
+        else:
+             form = changeUserdata(instance=request.user)  # Pass the instance here
+        return render(request, 'profile.html',{'form':form})
     else:
         return redirect('login')
-    
 
 def user_logout(request):
     logout(request)
@@ -96,7 +106,8 @@ def pass_change2(request):
     else:
         return redirect('login')
 
-
-
    
-        
+
+# def change_user_data(request):
+    
+
