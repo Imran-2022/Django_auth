@@ -6,6 +6,7 @@
     <form method="POST" class="w-50 m-auto" novalidate>
         <h1>Log-in Page</h1>
         {% csrf_token %}
+       
         {% for fm in form %} 
             {{fm.label_tag}} 
             {{fm}} 
@@ -16,6 +17,11 @@
           Log-in
         </button>
       </form>
-
+      <br>
+      {% if form.non_field_errors %}
+      {% for er in form.non_field_errors%}
+          <p class="bg-danger p-2 text-white">{{er}}</p>
+      {% endfor %}
+      {% endif %}
 </div>
 {% endblock %}

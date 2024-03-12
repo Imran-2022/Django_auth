@@ -22,8 +22,22 @@
 
 - only authenticate user can see the profile ! 
 
-- 
+- User Logout using Django Builtin functions
 
-- 
+- already have an account login message ! that's cool !! 
 
-- 
+- error message handle ... ! 
+
+- (authenticate loggedin user signup and login page dkte prbe na !!)
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
